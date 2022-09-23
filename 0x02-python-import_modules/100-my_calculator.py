@@ -8,10 +8,10 @@ if __name__ == "__main__":
     b = int(argv[3])
     ops = ["+", "-", "*", "/"]
     from calculator_1 import add, sub, mul, div
-    func = [add, sub, mul, div]
-    for i, o in enumerate(ops):
-        if argv[2] == o:
-            print("{} {} {} = {}".format(a, o, b, func[1](a, b)))
+    funcs = [add, sub, mul, div]
+    for i, s in enumerate(ops):
+        if argv[2] == s:
+            print("{} {} {} = {}".format(a, s, b, funcs[i](a, b)))
             break
     else:
         print("Unknown operator. Available operators: +, -, * and /")
