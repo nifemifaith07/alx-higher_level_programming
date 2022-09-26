@@ -5,7 +5,7 @@
 
 e.g
 
-urlpatterns = patterns(' ', url(r'^$', listing, name='investment-listing')
+urlpatterns = patterns(' ', url(r'^$', listing, name='investment-listing')\
 print('\n'.join([" ".join(["{:d}".format(item) for item in row]) for row in matrix])) too long right?
 1. indenting to the opening bracket
 - print('\n'.join([" ".join(["{:d}".format(item)\
@@ -18,6 +18,7 @@ print('\n'.join([" ".join(["{:d}".format(item) for item in row]) for row in matr
  
 print(\
 ___'\n'.join([" ".join(["{:d}".format(item)[normal indentation of 4 spaces here]\
-___________for item in row]) for row in matrix]))[indent o parenthesis)</b>\
-Note: backslash \ can also be used for line breaks or continuation
+___________for item in row]) for row in matrix]))[indent to parenthesis)</b>\
+Note: backslash \ can also be used for line breaks or continuation\
+  __ represent spaces
 </details>
