@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Square class definition"""
+"""Defines a class Square"""
 
 
 class Square:
@@ -11,7 +11,7 @@ class Square:
         """Initializes a square
         Args:
             size (int): size of a side of the Square
-        Returns:
+        Returns: 
             None
         """
         if type(size) is not int:
