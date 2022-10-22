@@ -3,7 +3,6 @@
 Defines a class Square and validate the size.
 """
 
-
 class Square:
     """Represent a Square
     Attributes:
