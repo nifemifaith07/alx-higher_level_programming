@@ -11,7 +11,8 @@ class Square:
         """Initializes a square
         Args:
             size (int): size of a side of the Square
-        Returns: None
+        Returns:
+            None
         """
         if type(size) is not int:
         raise TypeError("size must be an integer")
