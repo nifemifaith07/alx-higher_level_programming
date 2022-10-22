@@ -1,4 +1,3 @@
-sloc)  358 Bytes
 #!/usr/bin/python3
 """Square class definition"""
 
