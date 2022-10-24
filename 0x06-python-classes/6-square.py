@@ -12,12 +12,12 @@ class Square:
         """initializes the square
         Args:
             size (int): size of a side of the square
-            position (tuple): positiin of the square in 2D space
+            position (tuple): positoin of the square in 2D space
         Returns:
             None
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """calculates the square's area
@@ -38,7 +38,7 @@ class Square:
     def size(self, value):
         """setter of __size
         Args:
-            value (int): size of the side of the square
+            value (int): size of a side of the square
         Returns:
             None
         """
@@ -49,6 +49,20 @@ class Square:
                 raise ValueError("size must be >= 0")
             else:
                 self.__size = value
+
+    def my_print(self):
+        """prints the square
+        Returns:
+            None
+        """
+        if self.__size == 0:
+            print()
+            return
+        for i in range(self.__position[1]):
+            print()
+        for j in range(self.__size):
+            print("".join([" " for k in range(self.__position[0])]), end="")
+            print("".join(["#" for l in range(self.__size)]))
 
     @property
     def position(self):
@@ -67,24 +81,9 @@ class Square:
             None
         """
         if type(value) is not tuple or len(value) != 2 or \
-           type(value[0]) is not int or value[0] < 0 or \
-           type(value[1]) is not int or value[1] < 0:
+           type(value[0]) is not int or type(value[1]) is not int;
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] is < 0 or if value[1] is < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-
-        def my_print(self):
-        """prints the square
-        Returns:
-            None
-        """
-        if self.__size == 0:
-            print()
-            return
-        if self.__position[0] or self.__position[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        for i in range(self.__position[1]):
-            print()
-        for a in range(self.__size):
-            print("".join([" " for k in range(self.__position[0])]), end="")
-            print("".join(["#" for b in range(self.__size)]))
