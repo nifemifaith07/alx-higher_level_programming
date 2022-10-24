@@ -65,7 +65,7 @@ class Square:
             print("".join(["#" for a in range(self.__size)]))
 
     @property
-    def position(self)
+    def position(self):
         """getter of __position
         Returns:
             position of square in 2D space
