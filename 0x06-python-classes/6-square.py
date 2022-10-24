@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""defines a square"""
+"""Defines a Square  class"""
 
 
 class Square:
@@ -15,7 +15,7 @@ class Square:
             position (tuple): position of a square in 2D space
         Returns:
             None
-         """
+        """
         self.__size = size
         self.__position = position
 
