@@ -50,20 +50,6 @@ class Square:
             else:
                 self.__size = value
 
-    def my_print(self):
-        """prints the square
-        Returns:
-            None
-        """
-        if self.__size == 0:
-            print()
-            return
-        for i in range(self.__position[1]):
-            print()
-        for a in range(self.__size):
-            print("".join([" " for k in range(self.__position[0])]), end="")
-            print("".join(["#" for b in range(self.__size)]))
-
     @property
     def position(self):
         """getter of __position
@@ -86,3 +72,19 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
+
+        def my_print(self):
+        """prints the square
+        Returns:
+            None
+        """
+        if self.__size == 0:
+            print()
+            return
+        if self.__position[0] or self.__position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        for i in range(self.__position[1]):
+            print()
+        for a in range(self.__size):
+            print("".join([" " for k in range(self.__position[0])]), end="")
+            print("".join(["#" for b in range(self.__size)]))
