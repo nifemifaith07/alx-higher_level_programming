@@ -2,7 +2,7 @@
 """Module for 2. Append to a File"""
 
 
- def append_write(filename="", text=""): 
+def append_write(filename="", text=""): 
     """Appends a string to a text file
     Args:
         filename (str): filename to append to
