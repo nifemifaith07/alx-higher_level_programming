@@ -16,6 +16,5 @@ if os.path.isfile(file):
     obj_list = load_from_json_file(file)
 else:
     obj_list = []
-
 obj_list.extend(sys.argv[1:])
 save_to_json_file(obj_list, file)
