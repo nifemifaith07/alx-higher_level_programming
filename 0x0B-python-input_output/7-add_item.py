@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
     Python script that adds all args to a Python List.
-    List is then saved to a file.
+    List is then saved as a JSON representation to a file.
 """
 
 
