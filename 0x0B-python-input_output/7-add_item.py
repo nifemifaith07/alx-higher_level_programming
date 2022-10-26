@@ -17,6 +17,5 @@ if os.path.isfile(file):
 else:
    obj_list = []
 
-for i in range(1, len(sys.argv)):
-    obj_list.append(sys.argv[i])
+obj_list.extend(sys.argv[1:])
 save_to_json_file(obj_list, file)
