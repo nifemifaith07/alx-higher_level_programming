@@ -21,9 +21,9 @@ class Student:
 
     def to_json(self, attrs=None):
         """retrieves a dictionary representation of a Student instance"""
-        if attr is not None:
-            dict = {ky: self.__dict__[ky] for ky in self.__dict__.keys & attr}
-            return dict
+        if attrs is not None:
+            obj = {z: self.__dict__[z] for z in self.__dict__.keys() & attrs}
+            return obj
         else:
             return self.__dict__.copy()
 
