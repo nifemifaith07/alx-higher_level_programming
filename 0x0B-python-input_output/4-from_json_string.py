@@ -2,7 +2,7 @@
 """Module for 4. From JSON string to Object"""
 
 
-inport json
+import json
 
 
 def from_json_string(my_str):
