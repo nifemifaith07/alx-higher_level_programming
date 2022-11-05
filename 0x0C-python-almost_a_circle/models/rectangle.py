@@ -86,3 +86,33 @@ class Rectangle(Base):
         """overriding the __str__ method"""
         return "[Rectangle] ({}) {}/{} - {}/{}" \
             .format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """
+            Update Multiple Atrr of The Rectangle
+        """
+        a = 0
+        if args:
+            for arg in args:
+                if a == 0:
+                    self.id = arg
+                if a == 1:
+                    self.width = arg
+                if a == 2:
+                    self.height = arg
+                if a == 3:
+                    self.x = arg
+                if a == 4:
+                    self.y = arg
+                a += 1
+        else:
+            for arg in kwargs:
+                setattr(self, arg, kwargs.get(arg)
+
+    def to_dictionary(self):
+        """
+            returns the dictionary
+            representation of a Rectangle
+        """
+        return {'id': self.id, 'width': self.width,
+                'height': self.height, 'x': self.x, 'y': self.y}
