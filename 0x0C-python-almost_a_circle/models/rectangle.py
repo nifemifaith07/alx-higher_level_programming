@@ -88,9 +88,7 @@ class Rectangle(Base):
             .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """
-            Update Multiple Atrr of The Rectangle
-        """
+        """Update Multiple Atrr of The Rectangle"""
         a = 0
         if args:
             for arg in args:
@@ -110,9 +108,6 @@ class Rectangle(Base):
                 setattr(self, arg, kwargs.get(arg)
 
     def to_dictionary(self):
-        """
-            returns the dictionary
-            representation of a Rectangle
-        """
+        """returns the dictionary representation of a Rectangle"""
         return {'id': self.id, 'width': self.width,
                 'height': self.height, 'x': self.x, 'y': self.y}
