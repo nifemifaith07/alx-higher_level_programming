@@ -26,8 +26,9 @@ class Square(Rectangle):
         """overides the str method"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
                                                  self.y, self.width)
+
     def update(self, *args, **kwargs):
-        """Update Multiple Atrr of The Rectangle"""
+        """Update Atrributes of of The Rectangle"""
         att = 0
         if args and len(args) != 0:
             for arg in args:
