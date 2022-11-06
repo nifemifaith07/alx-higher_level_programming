@@ -25,3 +25,23 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """returns json rep of list_dictionaries"""
+        if not list_dictionaries:
+            return []
+        return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """saves json rep of list_objs to a file
+        Args:
+            list_objs (list): A list of inherited Base instances.
+        """
+        l_dict = []
+        with open(cls.__name__ +".json", "w") as jfile:
+            if list_objs:
+                for objs in list_objs:
+                    l_dict.append(objs.to_dictionary())
+            return jfile.write(cls.to_json_string(l.dict))
