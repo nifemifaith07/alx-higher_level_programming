@@ -30,7 +30,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """returns json rep of list_dictionaries"""
         if not list_dictionaries:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
