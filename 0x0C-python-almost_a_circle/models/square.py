@@ -24,31 +24,10 @@ class Square(Rectangle):
 
     def __str__(self):
         """overides the str method"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
-                                                 self.y, self.width)
+        return "[Square] ({}) {}/{} - {}" /
+            .format(self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
-        """Update the Square.
-        Args:
-            *args (ints): New attribute values.
-                - 1st argument represents id attribute
-                - 2nd argument represents size attribute
-                - 3rd argument represents x attribute
-                - 4th argument represents y attribute
-            **kwargs (dict): New key/value pairs of attributes.
-        """
+        """update class square by assigning variables"""
         att = 0
-        if args and len(args) != 0:
-            for arg in args:
-                if att == 0:
-                    self.id = arg
-                if att == 1:
-                    self.size = arg
-                if att == 2:
-                    self.x = arg
-                if att == 3:
-                    self.y = arg
-                att += 1
-       else:
-            for arg in kwargs:
-                setattr(self, arg, kwargs.get(arg))
+        if args and len(args) != 0
