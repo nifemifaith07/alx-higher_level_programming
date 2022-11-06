@@ -24,23 +24,23 @@ class Square(Rectangle):
 
     def __str__(self):
         """overides the str method"""
-        return "[Square] ({}) {}/{} - {}" /
+        return "[Square] ({}) {}/{} - {}" \
             .format(self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
-        """Update Multiple Atrr of The Rectangle"""
-        a = 0
+        """update"""
+        att = 0
         if args:
             for arg in args:
-                if a == 0:
+                if att == 0:
                     self.id = arg
-                if a == 1:
+                if att == 1:
                     self.size = arg
-                if a == 2:
+                if att == 2:
                     self.x = arg
-                if a == 3:
+                if att == 3:
                     self.y = arg
-                a += 1
+                att += 1
         else:
             for arg in kwargs:
                 setattr(self, arg, kwargs.get(arg))
