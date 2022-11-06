@@ -28,6 +28,19 @@ class Square(Rectangle):
             .format(self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
-        """update class square by assigning variables"""
-        att = 0
-        if args and len(args) != 0
+        """Update Multiple Atrr of The Rectangle"""
+        a = 0
+        if args:
+            for arg in args:
+                if a == 0:
+                    self.id = arg
+                if a == 1:
+                    self.size = arg
+                if a == 2:
+                    self.x = arg
+                if a == 3:
+                    self.y = arg
+                a += 1
+        else:
+            for arg in kwargs:
+                setattr(self, arg, kwargs.get(arg))
