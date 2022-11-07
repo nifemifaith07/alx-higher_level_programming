@@ -78,17 +78,17 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Write the CSV serialization of a list of objects to a file"""
+        """save_to_file_csv"""
         ld = []
-        with open(cls.__name__ + ".csv", "w", encoding="utf-8") as csvfile:
+        with open(cls.__name__ + ".csv", "w", encoding="utf-8") as f:
             if list_objs:
                 for obj in list_objs:
                     if cls.__name__ == 'Rectangle':
                         ld.append([
                             obj.id, obj.width, obj.height, obj.x, obj.y])
-                    else:
+                    if cls.__name__ == 'Square':
                         ld.append([obj.id, obj.size, obj.x, obj.y])
-            writer = csv.writer(csvfile)
+            writer = csv.writer(f)
             for row in ld:
                 writer.writerow(row)
 
