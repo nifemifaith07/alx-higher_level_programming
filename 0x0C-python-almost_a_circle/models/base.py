@@ -46,3 +46,31 @@ class Base:
                 l_dict.append(objs.to_dictionary())
         with open(filename, "w") as jfile:
             return jfile.write(cls.to_json_string(l_dict))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string rep json_string"""
+        if not json_string:
+            return "[]"
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        if cls.__name__ = "Rectangle":
+            new = cls(5, 10)
+        else:
+            new = cls(5)
+        new.update(**dictionary)
+        return new
+
+    @classmethod
+    def load_from_file(cls):
+        """returns list of instances"""
+        new = []
+        file = cls.__name__ + ".json"
+        with open(file, "w") as jfile:
+            l_dict = cls.from_json_string(jfile.read())
+            new.append(cls.create(**dict) for dict in l_dict)
+
+        return new
