@@ -39,10 +39,10 @@ class Base:
         Args:
             list_objs (list): A list of inherited Base instances.
         """
-        filename = cls.__name__ +".json"
+        filename = cls.__name__ + ".json"
         l_dict = []
+        if list_objs:
+            for objs in list_objs:
+                l_dict.append(objs.to_dictionary())
         with open(filename, "w") as jfile:
-            if list_objs:
-                for objs in list_objs:
-                    l_dict.append(objs.to_dictionary())
             return jfile.write(cls.to_json_string(l_dict))
