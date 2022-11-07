@@ -53,6 +53,3 @@ class Base:
         if not json_string:
             return []
         return json.loads(json_string)
-
-    @classmethod
-    def create(cls, **dictionary):
