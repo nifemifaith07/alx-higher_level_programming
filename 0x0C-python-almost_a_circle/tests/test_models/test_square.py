@@ -62,14 +62,14 @@ class TestSquare(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s = Square(1, "hello")
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            s = Square(1, True)
+            s = Square(1, "yyyy")
 
     def test_y_typeerror(self):
         """Test non-ints for y"""
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             s = Square(1, 1, "hello")
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            s = Square(1, 1, True)
+            s = Square(1, 1, "yyyy")
 
     def test_size_valueerror(self):
         """Test ints <= 0 for size"""
