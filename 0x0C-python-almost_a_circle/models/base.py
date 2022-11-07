@@ -51,5 +51,15 @@ class Base:
     def from_json_string(json_string):
         """returns the list of the JSON string rep json_string"""
         if not json_string:
-            return "[]"
+            return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        if cls.__name__ = "Rectangle":
+            new = cls(5, 10)
+        else:
+            new = cls(5)
+        new.update(**dictionary)
+        return new
