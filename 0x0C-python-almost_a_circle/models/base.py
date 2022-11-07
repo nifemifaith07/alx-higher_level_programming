@@ -57,13 +57,14 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attr already set
-
         Args:
-            **dictionary (dict): Key/value pairs of attributes to initialize.
+            **dictionaries: used as **kwargs
         """
         if cls.__name__ = "Rectangle":
             new = cls(5, 10)
         else:
             new = cls(5)
         new.update(**dictionary)
-        return new 
+        return 
+            
+        
