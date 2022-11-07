@@ -92,7 +92,6 @@ class Base:
             for row in ld:
                 writer.writerow(row)
 
-
     @classmethod
     def load_from_file_csv(cls):
         """Return a list of classes instantiated from a CSV file"""
