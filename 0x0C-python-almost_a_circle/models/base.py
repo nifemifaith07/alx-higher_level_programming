@@ -64,3 +64,14 @@ class Base:
                 new = cls(5)
             new.update(**dictionary)
             return new
+
+    @classmethod
+    def load_from_file(cls):
+        """returns list of instances"""
+        new = []
+        file = cls.__name__ + ".json"
+        with open(file, "w") as jfile:
+            l_dict = cls.from_json_string(jfile.read())
+            new.append(cls.create(**dict) for dict in l_dict)
+
+        return new 
