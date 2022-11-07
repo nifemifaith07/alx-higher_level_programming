@@ -75,3 +75,23 @@ class Base:
                 return [cls.create(**dict) for dict in l_dict]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Write the CSV serialization of a list of objects to a file"""
+        l_dict = []
+        file = cls.__name__ + ".csv"
+        with open(file, "w", encoding="UTF-8") as csvfile:
+            if list_objs is None or list_objs == []:
+                csvfile.write("[]")
+            else:
+                for obj in list_objs:
+                    if cls.__name__ = "Rectangle":
+                        l_dict.append([
+                                obj.id, obj.width, obj.height, obj.x, obj.y])
+                    else:
+                        l_dict.append([
+                                obj.id, obj.size, obj.x, obj.y])
+                writer = csv.writer(csvfile)
+                for row in l_dict:
+                    writer.writerow(row)
