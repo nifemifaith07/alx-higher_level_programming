@@ -57,3 +57,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns instances with all attr already set"""
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(5, 10)
+            else:
+                new = cls(5)
+            new.update(**dictionary)
+            return new
