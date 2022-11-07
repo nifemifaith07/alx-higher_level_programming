@@ -13,7 +13,7 @@ class TestSquare(unittest.TestCase):
         s1 = Square(5)
         s2 = Square(10)
         self.assertEqual(s1.id, 3)
-        self.assertEqual(s2.id, 6)
+        self.assertEqual(s2.id, 4)
 
     def test_initialization_without_arguments(self):
 
