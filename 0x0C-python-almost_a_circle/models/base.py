@@ -78,41 +78,56 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Write the CSV serialization of a list of objects to a file.
-        Args:
-            list_objs (list): A list of inherited Base instances.
-        """
+        """save to csv file"""
         filename = cls.__name__ + ".csv"
-        with open(filename, "w", newline="") as csvfile:
-            if list_objs is None or list_objs == []:
-                csvfile.write("[]")
-            else:
-                if cls.__name__ == "Rectangle":
-                    fieldnames = ["id", "width", "height", "x", "y"]
-                else:
-                    fieldnames = ["id", "size", "x", "y"]
-                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                for obj in list_objs:
-                    writer.writerow(obj.to_dictionary())
+        content = ""
+        text = []
+        if list_objs is not None:
+            content += ','.join(list_objs[0].to_dictionary().keys())
+            content += '\n'
+            for lst in list_objs:
+                content += ','.join(
+                    map(str, lst.to_dictionary().values())
+                )
+                content += '\n'
+
+        with open(filename, mode="w", encoding="utf-8") as f:
+            return f.write(content)
 
     @classmethod
     def load_from_file_csv(cls):
-        """Return a list of classes instantiated from a CSV file.
-        Reads from `<cls.__name__>.csv`.
-        Returns:
-            If the file does not exist - an empty list.
-            Otherwise - a list of instantiated classes.
-        """
+        """load from csv"""
         filename = cls.__name__ + ".csv"
-        try:
-            with open(filename, "r", newline="") as csvfile:
-                if cls.__name__ == "Rectangle":
-                    fieldnames = ["id", "width", "height", "x", "y"]
-                else:
-                    fieldnames = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
-                list_dicts = [dict([k, int(v)] for k, v in d.items())
-                              for d in list_dicts]
-                return [cls.create(**d) for d in list_dicts]
-        except IOError:
-            return []
+        object_created = []
+
+        with open(filename, 'r') as f:
+            header = f.readline().replace('\n', '').split(',')
+            for el in f.readlines():
+                values = map(int, el.replace('\n', '').split(','))
+                data = dict(zip(header, values))
+                object_created.append(cls.create(**data))
+
+        return object_created
+
+    @classmethod
+    def draw(cls, list_rectangles, list_squares):
+        """draw the figure
+        """
+        window = turtle.Screen()
+        pen = turtle.Pen()
+        figures = list_rectangles + list_squares
+
+        for fig in figures:
+            pen.up()
+            pen.goto(fig.x, fig.y)
+            pen.down()
+            pen.forward(fig.width)
+            pen.right(90)
+            pen.forward(fig.height)
+            pen.right(90)
+            pen.forward(fig.width)
+            pen.right(90)
+            pen.forward(fig.height)
+            pen.right(90)
+
+        window.exitonclick()
