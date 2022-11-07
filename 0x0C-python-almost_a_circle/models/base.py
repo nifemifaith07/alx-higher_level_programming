@@ -94,15 +94,15 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Return a list of classes instantiated from a CSV file"""
+        """load_from_file_csv"""
         try:
-            ld = []
-            with open(cls.__name__ + ".csv", "r" encoding="utf-8") as csvfile:
-                reader = csv.DictReader(csvfile)
+            with open(cls.__name__ + ".csv", "r") as f:
+                ld = []
+                reader = csv.DictReader(f)
                 for row in reader:
-                    for key, val in row.items:
-                        row[key] = int[val]
+                    for key, val in row.items():
+                        row[key] = int(val)
                 ld.append(row)
-                return [cls.create(**d) for d in ld]
+                return [cls.create(**item) for item in ld]
         except FileNotFoundError:
             return []
