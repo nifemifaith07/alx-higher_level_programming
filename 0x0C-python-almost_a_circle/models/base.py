@@ -70,7 +70,7 @@ class Base:
         """returns list of instances"""
         new = []
         file = cls.__name__ + ".json"
-        with open(file, "w") as jfile:
+        with open(file, "r") as jfile:
             l_dict = cls.from_json_string(jfile.read())
             new.append(cls.create(**dict) for dict in l_dict)
 
