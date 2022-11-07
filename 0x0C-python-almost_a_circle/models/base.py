@@ -79,3 +79,30 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Write the CSV serialization of a list of objects to a file"""
+        ld = []
+        with open(cls.__name__ + ".csv", "w", encoding="utf-8") as csvfile:
+            if list_objs:
+                for obj in list_objs:
+                    if cls.__name__ == 'Rectangle':
+                        ld.append([
+                            obj.id, obj.width, obj.height, obj.x, obj.y])
+                    else:
+                        ld.append([obj.id, obj.size, obj.x, obj.y])
+            writer = csv.writer(csvfile)
+            for row in ld:
+                writer.writerow(row)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Return a list of classes instantiated from a CSV file"""
+        try:
+            ld = []
+            with open(cls.__name__ + ".csv", "r" encoding="utf-8") as csvfile:
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    for key, val in row.items:
+                        row[key] = int[val]
+                ld.append(row)
+                return [cls.create(**d) for d in ld]
+        except FileNotFoundError:
+            return []
