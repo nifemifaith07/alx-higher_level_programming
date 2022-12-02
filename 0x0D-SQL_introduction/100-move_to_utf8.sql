@@ -13,7 +13,7 @@ COLLATE utf8mb4_unicode_ci;
 
 -- Field name in first_table
 USE hbtn_0c_0;
-ALTER TABLE first—table
+ALTER TABLE first_table
 CHANGE name name VARCHAR(256)
 CHARACTER SET utf8mb4
-COLLATE utf8mb4_unicode_ci
+COLLATE utf8mb4_unicode_ci;
