@@ -8,7 +8,7 @@ COLLATE utf8mb4_unicode_ci;
 -- Convert Table first_table
 USE hbtn_0c_0;
 ALTER TABLE first_table
-CHARACTER SET utf8mb4
+CONVERT TO CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
 
 -- Field name in first_table
