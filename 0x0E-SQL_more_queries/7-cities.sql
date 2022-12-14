@@ -7,7 +7,7 @@ CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 -- state_id INT, can’t be null and must be a FOREIGN KEY that references to id of the states table
 -- name VARCHAR(256) can’t be null
 -- If the table cities already exists, your script should not fail
-CRAETE TABLE IF NOT EXISTS hbtn_0d_usa.cities
+CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities
 (
 	id INT UNIQUE AUTO_INCREMENT NOT NULL,
 	state_id INT NOT NULL,
