@@ -6,3 +6,4 @@ if (process.argv.length <= 3) {
     .slice(2, process.argv.length)
     .sort((a, b) => b - a);
   console.log(res[1]);
+}
