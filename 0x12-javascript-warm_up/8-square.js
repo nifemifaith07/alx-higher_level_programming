@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const size = Math.floor(Number(process.argv[2]));
-if (NaN(size) === true) {
+if (isNaN(size) === true) {
   console.log('Missing size');
 } else {
   let line = '';
