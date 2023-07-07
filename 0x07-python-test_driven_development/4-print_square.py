@@ -1,4 +1,4 @@
-#!/usr/bin/pyton3
+#!/usr/bin/python3
 """
 This is the "4-print_square" module.
 This module supplies one function, print_square(size).
