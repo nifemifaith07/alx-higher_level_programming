@@ -20,22 +20,22 @@ Checking if function has docstring:
 Checking for passing matrix as None:
         >>> matrix_divided(None, 1)
         Traceback (most recent call last):
-         ...
-         TypeError: matrix must be a matrix (list of lists) of integers/floats
+        ...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Checking for passing div as None:
         >>> matrix = [[1, 2, 3], [4, 5, 6]]
         >>> matrix_divided(matrix, None)
         Traceback (most recent call last):
-         ...
-         TypeError: div must be a number
+        ...
+        TypeError: div must be a number
 
 Checking that matrix is list:
         >>> matrix = "Hello"
         >>> matrix_divided(matrix, 1)
         Traceback (most recent last call):
-         ...
-         TypeError: matrix must be a matrix (list of lists) of integers/floats
+        ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Checking for list of mixed list and non-list items:
         >>> matrix =  [[1, 2, 3], "Hello"]
