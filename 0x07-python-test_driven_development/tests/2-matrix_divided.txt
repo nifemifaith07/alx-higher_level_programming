@@ -5,7 +5,7 @@ Using ``matrix_divided``
 --------------------------------
 
 Importing the function from the module:
-        >>> matrix_divided = __import__(""2-matrix_divided").matrix_divided
+        >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
 
 Checking if module has docstring:
         >>> md = __import__(""2-matrix_divided").__doc__
