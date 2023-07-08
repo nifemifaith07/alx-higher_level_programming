@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Contains the matrix_mul function
+this is the matrix_mul module
+Contains one function "matrix_mul(m_a, m_b)"
 """
 
 
