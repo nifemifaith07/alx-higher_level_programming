@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-this is the matrix_mul module
-Contains one function "matrix_mul(m_a, m_b)"
+This is the "100-matrix_mul" module.
+The module has one function, matrix_mul(m_a, m_b).
 """
 
 
