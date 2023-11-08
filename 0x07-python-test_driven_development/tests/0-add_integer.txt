@@ -19,9 +19,44 @@ Regular additions
   8
   >>> add_integer(-3, 5)
   2
-  add_integer(3, -5)
+  >>> add_integer(3, -5)
   -2
-  add_integer(-3, -5)
+  >>> add_integer(-3, -5)
   -8
-  add_integer(3)
+  >>> add_integer(3)
   101
+  >>> add_integer(-2)
+  96
+  >>> [add_integer(x, x * 2) for x in range (5)]
+  [0, 3, 6, 9, 12]
+  >>> add_integer(999999999999999999, 1)
+  1000000000000000000
+
+Floats addition
+  >>> add_integer(3.2, 5)
+  8
+  >>> add_integer(3, 2.1)
+  5
+  >>> add_integer(-3.2, 5.5)
+  2
+  
+Too Many/No Arguments
+  >>> add_integer()
+  Traceback (most recent call last):
+  ...
+  TypeError: add_integer() missing 1 required positional argument: 'a'
+  >>> add_integer(2, 3, 4, 5)
+  Traceback (most recent call last):
+  ...
+  TypeError: add_integer() takes 2 positional arguments
+
+Boolean Parameters
+  >>> add_integer(True, 5)
+  Traceback (most recent call last):
+  ...
+  TypeError: a must be an integer
+  >>> add_integer(2, False)
+  Traceback (most recent call last):
+  ...
+  TypeError: b must be an integer
+
