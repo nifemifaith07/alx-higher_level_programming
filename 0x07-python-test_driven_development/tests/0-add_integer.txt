@@ -1,0 +1,27 @@
+doctest for '0-add_integer.py' file
+
+using 'add_integer'
+
+Import the function
+  >>> add_integer = __import__("0-add_integer").add_integer
+
+Check for module and function docstrings
+  >>> mod = __import__("0-add_integer").__doc__
+	>>> len(mod) > 1
+    True
+
+  >>> fxn = __import__("0-add_integer").add_integer.__doc__
+  >>> len(fxn) > 1
+    True
+
+Regular additions
+  >>> add_integer(3, 5)
+  8
+  >>> add_integer(-3, 5)
+  2
+  add_integer(3, -5)
+  -2
+  add_integer(-3, -5)
+  -8
+  add_integer(3)
+  101
