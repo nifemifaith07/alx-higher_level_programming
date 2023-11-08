@@ -10,6 +10,7 @@ Check for module and function docstrings
   >>> fxn = __import__("0-add_integer").add_integer.__doc__
   >>> len(fxn) > 1
   True
+
 Regular additions
   >>> add_integer(3, 5)
   8
