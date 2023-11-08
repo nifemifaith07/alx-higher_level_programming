@@ -45,6 +45,7 @@ Too Many/No Arguments
   Traceback (most recent call last):
   ...
   TypeError: add_integer() missing 1 required positional argument: 'a'
+
   >>> add_integer(2, 3, 4, 5)
   Traceback (most recent call last):
   ...
@@ -55,8 +56,44 @@ Boolean Parameters
   Traceback (most recent call last):
   ...
   TypeError: a must be an integer
+
   >>> add_integer(2, False)
   Traceback (most recent call last):
   ...
   TypeError: b must be an integer
 
+Non integer parameters
+  >>> add_integer("hi")
+  Traceback (most recent call last):
+  ...
+  TypeError: a must be an integer
+
+  >>> add_integer(1, "hi")
+  Traceback (most recent call last):
+  ...
+  TypeError: b must be an integer
+
+  >>> add_integer(none)
+  Traceback (most recent call last):
+  ...
+  TypeError: a must be an integer
+
+  >>> add_integer(float('nan'))
+  Traceback (most recent call last):
+  ...
+  OverflowError: cannot convert float nan to integer
+
+  >>> add_integer(10, float('inf'))
+  Traceback (most recent call last):
+  ...
+  OverflowError: cannot convert float infinity to integer
+
+  >>> add_integer([1,2,3], 4)
+  Traceback (most recent call last):
+  ...
+  TypeError: a must be an integer
+
+  >>> add_integer((10,), {"key": "value"})
+  Traceback (most recent call last):
+  ...
+  TypeError: a must be an integer
