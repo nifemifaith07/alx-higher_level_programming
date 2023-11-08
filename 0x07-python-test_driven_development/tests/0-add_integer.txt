@@ -1,13 +1,11 @@
 doctest for '0-add_integer.py' file
 
-using 'add_integer'
-
 Import the function
   >>> add_integer = __import__("0-add_integer").add_integer
 
 Check for module and function docstrings
   >>> mod = __import__("0-add_integer").__doc__
-	>>> len(mod) > 1
+  >>> len(mod) > 1
     True
 
   >>> fxn = __import__("0-add_integer").add_integer.__doc__
@@ -17,26 +15,35 @@ Check for module and function docstrings
 Regular additions
   >>> add_integer(3, 5)
   8
+
   >>> add_integer(-3, 5)
   2
+
   >>> add_integer(3, -5)
   -2
+
   >>> add_integer(-3, -5)
   -8
+
   >>> add_integer(3)
   101
+
   >>> add_integer(-2)
   96
+
   >>> [add_integer(x, x * 2) for x in range (5)]
   [0, 3, 6, 9, 12]
+
   >>> add_integer(999999999999999999, 1)
   1000000000000000000
 
 Floats addition
   >>> add_integer(3.2, 5)
   8
+
   >>> add_integer(3, 2.1)
   5
+
   >>> add_integer(-3.2, 5.5)
   2
   
