@@ -13,7 +13,7 @@ Check for function and module doctstrings
     True
 
     >>> fxn __import__("2-matrix_divided").matrix_divided.__doc__
-    >>> len(fxn) >1
+    >>> len(fxn) > 1
     True
 
 None as arguments
@@ -23,6 +23,7 @@ None as arguments
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
     >>> matrix = [[1, 2, 3], [4, 5, 6]]
+
     >>> matrix_divided(matrix, None)
 	Traceback (most recent call last):
     ...
@@ -62,11 +63,13 @@ reqular divisions with +ve/-ve ints and floats
 
 1xn matrix:
     >>> matrix = [[1, 2, 3]]
+
 	>>> matrix_divided(matrix, 2)
 	[[0.5, 1.0, 1.5]]
 
 nx1 matrix:
     >>> matrix = [[1], [2], [3]]
+
 	>>> matrix_divided(matrix, 2)
 	[[0.5], [1.0], [1.5]]
 
@@ -76,15 +79,18 @@ division by infinity:
 
 division with infinity in numerator:
 	>>> matrix = [[1, float('inf'), 3], [4, 5, 6]]
+
 	>>> matrix_divided(matrix, 1)
     [[1.0, inf, 3.0], [4.0, 5.0, 6.0]]
 
 Division with infinity in numerator and denomenator
 	>>> matrix_divided(matrix, float('inf'))
+
     [[0.0, nan, 0.0], [0.0, 0.0, 0.0]]
 
 list of list and non-list items
     >>> matrix = [[1, 2, 3], "Hello"]
+
 	>>> matrix_divided(matrix, 1)
     Traceback (most recent call last):
     ...
@@ -92,6 +98,7 @@ list of list and non-list items
 
 uneven matrix
 	>>> matrix = [[1, 2, 3], [4, 5, 6, 7]]
+
 	>>> matrix_divided(matrix, 3)
 	Traceback (most recent call last):
     ...
@@ -99,6 +106,7 @@ uneven matrix
 
 mix of ints, floats, and non-numbers
     >>> matrix = [[1, "H", 3], [4.1, 5, 6.8]]
+
     >>> matrix_divided(matrix, 11)
 	Traceback (most recent call last):
     ...
@@ -106,6 +114,7 @@ mix of ints, floats, and non-numbers
 
 mix of ints, floats, tuple, and bool:
 	>>> matrix = [[1, True, 3], [False, (5,), 6.8]]
+
     >>> matrix_divided(matrix, 11)
     Traceback (most recent call last):
     ...
