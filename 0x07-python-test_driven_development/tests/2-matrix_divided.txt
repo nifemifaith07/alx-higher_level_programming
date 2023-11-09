@@ -15,3 +15,50 @@ Check for function and module doctstrings
     >>> fxn __import__("2-matrix_divided").matrix_divided.__doc__
     >>> len(fxn) >1
     True
+
+None as arguments
+    >>> matrix_divided(None, 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, None)
+	Traceback (most recent call last):
+    ...
+	TypeError: div must be a number
+
+print matrix
+    >>> matrix
+     [[1, 2, 3], [4, 5, 6]]
+
+Empty matrix
+    >>> matrix_divided([], 1)
+    []
+
+List as matrix
+    >>> matrix = [1, 2, 3]
+    >>> matrix_divided(matrix, 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+reqular divisions with +ve/-ve ints and floats
+    >>> matrix = [[2, 4, 6], [8, 10, 12]]
+
+    >>> matrix_divided(matrix, 2)
+    [[1, 2, 3], [4, 5, 6]]
+
+    >>> matrix_divided(matrix, -0.5)
+    [[-4, -8, -12], [-16, -20, -24]]
+
+    >>> matrix = [[-2.5, -3.5], [-4.5, -5.5]]
+
+    >>> matrix_divided(matrix, -5)
+    [[0.5, 0.7], [0.9, 1.1]]
+
+    >>> matrix_divided(matrix, 0.2)
+    [[-12.5, -17.5], [-22.5, -27.6]]
+
+1*n Matrix
+    m
