@@ -76,7 +76,7 @@ division by infinity:
 division with infinity in numerator:
 	>>> matrix = [[1, float('inf'), 3], [4, 5, 6]]
 
-	>>> matrix_divided(matrix, 1)
+    >>> matrix_divided(matrix, 1)
     [[1.0, inf, 3.0], [4.0, 5.0, 6.0]]
 
 Division with infinity in numerator and denomenator
