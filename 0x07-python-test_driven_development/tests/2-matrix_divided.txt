@@ -27,7 +27,7 @@ None as arguments
 
 print matrix
     >>> matrix
-     [[1, 2, 3], [4, 5, 6]]
+    [[1, 2, 3], [4, 5, 6]]
 
 Empty matrix
     >>> matrix_divided([], 1)
@@ -86,8 +86,7 @@ Division with infinity in numerator and denomenator
 
 list of list and non-list items
     >>> matrix = [[1, 2, 3], "Hello"]
-
-	>>> matrix_divided(matrix, 1)
+    >>> matrix_divided(matrix, 1)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
