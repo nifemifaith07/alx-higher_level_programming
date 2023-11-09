@@ -1,25 +1,25 @@
 docstring for The '3-say_my_name' module
 
 import the function from the module
-	>>> say_my_name = __import__("3-say_my_name").say_my_name
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
 
 Checking for module and function docstrings
     >>> md = __import__("3-say_my_name").__doc__
     >>> len(md) > 1
     True
 
-	>>> fn = __import__("3-say_my_name").say_my_name.__doc__
+    >>> fn = __import__("3-say_my_name").say_my_name.__doc__
     >>> len(fn) > 1
     True
 
 Passing None as arguments
-	>>> say_my_name(None, "Hello")
-	Traceback (most recent call last):
+    >>> say_my_name(None, "Hello")
+    Traceback (most recent call last):
     ...
     TypeError: first_name must be a string
 
-	>>> say_my_name("Hello", None)
-	Traceback (most recent call last):
+    >>> say_my_name("Hello", None)
+    Traceback (most recent call last):
     ...
     TypeError: last_name must be a string
 
@@ -34,28 +34,28 @@ Non-string type as arguments
     ...
     TypeError: last_name must be a string
 
-	>>> say_my_name(['faith'], ['li'])
+    >>> say_my_name(['faith'], ['li'])
     Traceback (most recent call last):
     ...
     TypeError: first_name must be a string
 
 normal use:
-	>>> say_my_name("Hello", "World")
-	My name is Hello World
+    >>> say_my_name("Hello", "World")
+    My name is Hello World
 
-	>>> say_my_name("You know nothing", "John Snow")
-	My name is You know nothing John Snow
+    >>> say_my_name("You know nothing", "John Snow")
+    My name is You know nothing John Snow
 
-	>>> say_my_name("Hello")
-	My name is Hello 
+    >>> say_my_name("Hello")
+    My name is Hello 
 
 more than 2 args:
-	>>> say_my_name("Hello", "World", "hi")
-	Traceback (most recent call last):
-	...
-	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+    >>> say_my_name("Hello", "World", "hi")
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
 no argument
-	>>> say_my_name()
-	Traceback (most recent call last):
-	...
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
