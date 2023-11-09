@@ -1,13 +1,9 @@
 doctest for 2-matrix_divided.py file
 
-using "matrix_divided"
-----------------------------------------------
-
 Import function from module 
     >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
 
 Check for function and module doctstrings
-
     >>> mod = __import__("2-matrix_divided").__doc___
     >>> len(mod) > 1
     True
