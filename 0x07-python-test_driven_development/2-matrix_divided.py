@@ -18,10 +18,19 @@ def matrix_divided(matrix, div):
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-
     if div == 0:
-        raise ZeroDivisionError('division by zero')
+        raise ZeroDivisionError("division by zero")
+
     if len(matrix) = 0:
         return []
-    for l in matrix:
-        
+    row_len = len(matrix[0])
+
+    for row in matrix:
+        if type(row) is not list:
+            raise TypeError(error_msg)
+        if row_len != len(row):
+            raise TypeError("Each row of the matrix must have the same size")
+        for elm in row:
+            if not isinstance(elm, (int, float)):
+                raise TypeError(error_msg)
+    return [[round(elm / div, 2) for elm in row] for row in matrix]
