@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module divides all elements of a matrix 
+This module divides all elements of a matrix
+matrix: list of lists of ints/floats
 """
 
 
