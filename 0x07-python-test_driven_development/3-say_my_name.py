@@ -2,7 +2,7 @@
 """
 this is the "3-say_my_name" module
 the module has one function "say_my_name
-""""
+"""
 
 
 def say_my_name(first_name, last_name=""):
