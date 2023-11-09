@@ -8,7 +8,7 @@ Check for function and module doctstrings
     >>> len(mod) > 1
     True
 
-    >>> fxn __import__("2-matrix_divided").matrix_divided.__doc__
+    >>> fxn = __import__("2-matrix_divided").matrix_divided.__doc__
     >>> len(fxn) > 1
     True
 
@@ -34,7 +34,7 @@ Empty matrix
     []
 
 List as matrix
-    >>> matrix = [1, 2, 3]
+    >>> matrix = "hello"
     >>> matrix_divided(matrix, 1)
     Traceback (most recent call last):
     ...
@@ -44,7 +44,7 @@ reqular divisions with +ve/-ve ints and floats
     >>> matrix = [[2, 4, 6], [8, 10, 12]]
 
     >>> matrix_divided(matrix, 2)
-    [[1, 2, 3], [4, 5, 6]]
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
 
     >>> matrix_divided(matrix, -0.5)
     [[-4.0, -8.0, -12.0], [-16.0, -20.0, -24.0]]
