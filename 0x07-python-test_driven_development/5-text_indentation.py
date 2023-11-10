@@ -20,7 +20,7 @@ def text_indentation(text):
             else:
                 flag = 1
         if flag == 1:
-        if elm == '?' or elm == '.' or elm == ':':
+            if elm == '?' or elm == '.' or elm == ':':
             print(elm)
             print()
             flag = 0
