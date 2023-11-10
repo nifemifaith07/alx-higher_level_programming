@@ -41,13 +41,12 @@ Regular use
 
     >>> print_square(1)
     #
-Negative ints
     >>> print_square(-1)
     Traceback (most recent call last):
     ...
     ValueError: size must be >= 0
 
-Non-number types:
+Non-number types
     >>> print_square((1,))
     Traceback (most recent call last):
     ...
@@ -63,7 +62,7 @@ Non-number types:
     ...
     TypeError: size must be an integer
 
-Non-int number types:
+Non-int number types
     >>> print_square(1.0)
     Traceback (most recent call last):
     ...
