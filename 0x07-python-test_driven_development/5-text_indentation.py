@@ -21,8 +21,8 @@ def text_indentation(text):
                 flag = 1
         if flag == 1:
             if elm == '?' or elm == '.' or elm == ':':
-            print(elm)
-            print()
-            flag = 0
-        else:
-            print(elm, end="")
+                print(elm)
+                print()
+                flag = 0
+            else:
+                print(elm, end="")
