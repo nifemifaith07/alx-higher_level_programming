@@ -105,16 +105,16 @@ Checking for multiple spaces:
 
 Checking for standalone special chars:
     >>> text_indentation(" . ? : ")
-	.
-	<BLANKLINE>
-	?
-	<BLANKLINE>
-	:
-	<BLANKLINE>
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
 
 Checking for one word:
     >>> text_indentation("Hello")
-	Hello
+    Hello
 
 Checking for newline at beginning:
     >>> text_indentation(" \n Hello. Whatcha up to?")
@@ -125,12 +125,12 @@ Checking for newline at beginning:
     <BLANKLINE>
  
 Checking for newline in middle:
-    >>> text_indentation("Hello \n . How are you?")
-    Hello 
-    .
-    <BLANKLINE>
-    How are you?
-    <BLANKLINE>
+   >>> text_indentation("Hello \n . How are you?")
+   Hello 
+   .
+   <BLANKLINE>
+   How are you?
+   <BLANKLINE>
 
 Checking for newline at end:
     >>> text_indentation("Hello, how are you?\n")
