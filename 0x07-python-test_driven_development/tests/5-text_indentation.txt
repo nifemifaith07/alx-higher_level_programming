@@ -7,7 +7,6 @@ Checking for module and function docstring:
     >>> md = __import__("5-text_indentation").__doc__
 	>>> len(md) > 1
 	True
-
 	>>> fxn = __import__("5-text_indentation").text_indentation.__doc__
     >>> len(fxn) > 1
     True
