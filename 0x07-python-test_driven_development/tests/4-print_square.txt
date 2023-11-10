@@ -41,7 +41,7 @@ Regular use
 
     >>> print_square(1)
     #
-Negative ints:
+Negative ints
     >>> print_square(-1)
     Traceback (most recent call last):
     ...
