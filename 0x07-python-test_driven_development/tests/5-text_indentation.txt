@@ -127,7 +127,7 @@ Checking for newline at beginning:
 Checking for newline in middle:
     >>> text_indentation("Hello \n . How are you?")
     Hello 
-    .
+     .
     <BLANKLINE>
     How are you?
     <BLANKLINE>
