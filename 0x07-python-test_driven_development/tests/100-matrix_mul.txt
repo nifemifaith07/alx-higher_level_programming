@@ -100,3 +100,14 @@ Checking for mismatching matrices:
 	Traceback (most recent call last):
 	...
 	ValueError: m_a and m_b can't be multiplied
+
+Checking for list of numbers as m_a/m_b
+        >>> matrix_mul([1, 2, 3], [[1, 2], [3, 4]])
+        Traceback (most recent call last):
+	...
+        TypeError: m_a must be a list of lists
+
+        >>> matrix_mul([[1, 2], [3, 4]], [1, 2])
+        Traceback (most recent call last):
+	...
+        TypeError: m_b must be a list of lists
