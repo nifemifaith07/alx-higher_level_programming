@@ -1,4 +1,4 @@
-#!/usr/bin/node 
+#!/usr/bin/node
 // searches the second biggest no in the argument
 if (process.argv.length <= 3) {
   console.log(0);
