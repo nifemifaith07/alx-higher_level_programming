@@ -1,4 +1,5 @@
 #!/usr/bin/node
+// add a new function incr that increments value
 const myObject = {
   type: 'object',
   value: 12
