@@ -9,3 +9,4 @@ for (const key in dict) {
   }
   newDict[item].push(key);
 }
+console.log(newDict);
